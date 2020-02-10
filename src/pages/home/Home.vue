@@ -1,9 +1,9 @@
 <template>
     <div class="home" id="home">
-        <vue-canvas-nest :el="'#home'" :config="{color:'44,93,178', opacity:0.4, count: 99, zIndex:200}"/>
+        <vue-canvas-nest :el="'#home'" :config="{color:'44,93,178', opacity:0.4, count: 50, zIndex:200}"/>
         <div id="up" class="up">
             <div class="left-title">
-                <title-line/>
+                <title-line margin-bottom="10px"/>
                 <div class="title">
                     细雨听风
                 </div>
@@ -21,7 +21,7 @@
                 <div class="up-img">
                     <img src="../../assets/home.png" alt="home.png"/>
                 </div>
-                <title-line/>
+                <title-line margin-bottom="10px"/>
                 <div class="title">
                     细雨听风
                 </div>
@@ -140,7 +140,7 @@
                 }
             }
             @media (max-width: 768px) {
-                height: 590px;
+                height: 600px;
                 .left-title {
                     display: none;
                 }
@@ -154,8 +154,8 @@
                     height: 100%;
 
                     .up-img {
-                        height: 340px;
-                        width: 320px;
+                        height: 260px;
+                        width: 240px;
                         margin: 0 auto 40px;
 
                         img {
@@ -169,7 +169,7 @@
                         font-size: 30px;
                         font-weight: 600;
                         color: #292929;
-                        margin: 0 auto 10px;
+                        margin: 10px auto 20px;
                     }
 
                     .sub-title {
@@ -177,7 +177,7 @@
                         text-align: center;
                         font-size: 18px;
                         color: #292929;
-                        margin: 0 auto 20px;
+                        margin: 10px auto 30px;
                     }
                     .btn {
                         width: 80%;
@@ -192,7 +192,7 @@
             background-image: linear-gradient(#A2C5FF, #2C5DB2);
 
             .title {
-                font-size: 34px;
+                font-size: 26px;
                 font-weight: 500;
                 text-align: center;
                 padding-top: 46px;

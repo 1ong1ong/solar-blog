@@ -74,7 +74,7 @@ let routers = [
 ];
 const router = new Router({
     routes: routers,
-    mode: 'history',
+    // mode: 'history',
 });
 
 router.afterEach(() => {

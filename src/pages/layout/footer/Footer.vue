@@ -1,7 +1,7 @@
 <template>
     <div class="foot">
         <div class="content">
-            <a-row :gutter="{ xs: 8, sm: 16, md: 24}">
+            <a-row >
                 <a-col :xs="24" :sm="8">
                     <div class="box">
                         <div class="title">
@@ -24,10 +24,10 @@
                         <!--                            本站托管于 Coding-->
                         <!--                        </div>-->
                         <div class="item">
-                            本站托管于 Coding
+                            本站托管于 GitHub
                         </div>
                         <div class="item">
-                            浙 ICP 备 18050633 号
+                            浙 ICP 备18050633号
                         </div>
                     </div>
                 </a-col>
@@ -40,7 +40,7 @@
                         <!--                            资源推荐-->
                         <!--                        </div>-->
                         <div class="item">
-                            社区QQ交流群：970863783
+                            QQ交流群：970863783
                         </div>
                     </div>
                 </a-col>
@@ -50,7 +50,7 @@
                 <span>
                     Made with
                     <span><a-icon type="heart" theme="filled" style="font-size: 24px; color: #b24140"/></span>
-                    by <span>cxl</span>
+                    by <span>CXL</span>
                 </span>
             </div>
         </div>
@@ -69,7 +69,7 @@
 
     .foot {
         width: 100%;
-        min-height: 340px;
+        min-height: 300px;
         background-color: black;
 
         .content {
@@ -79,7 +79,8 @@
 
             .box {
                 padding: 10px 0 10px 30%;
-                min-height: 200px;
+                min-height: 140px;
+
                 @media (max-width: 576px) {
                     text-align: center;
                     padding: 10px;

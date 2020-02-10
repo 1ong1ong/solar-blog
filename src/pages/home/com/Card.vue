@@ -42,6 +42,10 @@
             width: 200px;
             height: 200px;
             box-shadow: 0 10px 20px #273247;
+            @media (max-width: 768px) {
+                width: 140px;
+                height: 140px;
+            }
 
             img {
                 width: 100%;
@@ -52,10 +56,11 @@
         }
 
         .art-text {
-            margin-top: 30px;
             color: white;
             font-size: 18px;
             text-align: center;
+            width: 80%;
+            margin: 30px auto 0;
         }
     }
 </style>

@@ -22,7 +22,7 @@
             <title-line backgroundColor="#eff2f7" height="4px" margin-top="30px" margin-bottom="30px"/>
         </div>
         <div class="img">
-            <img src="../../assets/summer-solstice-strawberry-moon.gif" alt="summer-solstice-strawberry-moon.gif">
+<!--            <img src="../../assets/summer-solstice-strawberry-moon.gif" alt="summer-solstice-strawberry-moon.gif">-->
         </div>
         <div class="comment-div">
             <comment :level="1" :article-id="0" @reply="reply"/>
@@ -130,11 +130,16 @@
             width: 100%;
             display: flex;
             justify-content: center;
-
-            img {
-                border-radius: 5px;
-                /*box-shadow: 0 10px 10px;*/
-                max-width: 90%;
+            background-image: url("../../assets/summer-solstice-strawberry-moon.gif");
+            background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+            @media (min-width: 1100px) {
+                height: 430px;
+            }
+            @media (min-width: 768px) and (max-width: 1100px) {
+                height: 330px;
+            }
+            @media (max-width: 768px) {
+                height: 200px;
             }
         }
 

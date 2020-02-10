@@ -97,14 +97,15 @@
 
                 .left {
                     height: 150px;
-                    width: calc(~"100% - 170px");
+                    width: calc(~'100% - 160px');
+
                     position: absolute;
                     left: 0;
 
                     .title {
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 500;
-                        max-height: 60px;
+                        /*max-height: 54px;*/
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
@@ -112,6 +113,7 @@
                         -webkit-box-orient: vertical;
                         position: absolute;
                         top: 0;
+                        width: 100%;
 
                         &:hover {
                             cursor: pointer;
@@ -120,8 +122,13 @@
 
                     .tag {
                         position: absolute;
-                        top: 74px;
-
+                        top: 70px;
+                        max-height: 56px;
+                        overflow: hidden;
+                        width: 100%;
+                        @media(max-width: 576px) {
+                            top: 60px;
+                        }
                         .ant-tag {
                             border: none;
                             background-color: #e7f1ff;
@@ -129,12 +136,13 @@
                             /*font-size: 14px;*/
                             /*line-height: 28px;*/
                             border-radius: 6px;
+                            margin-top: 4px;
                         }
                     }
 
                     .time {
                         position: absolute;
-                        bottom: 14px;
+                        bottom: 10px;
                         font-size: 15px;
                         color: #b4b4b4;
 

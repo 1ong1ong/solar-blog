@@ -3,7 +3,7 @@ module.exports = {
     // 部署包的路径
     publicPath: '/',
     // 部署包文件夹的名称
-    outputDir: 'dist',
+    outputDir: 'static',
     // 静态文件的文件夹名称
     assetsDir: 'static',
     // 指定index.html的输出路径
