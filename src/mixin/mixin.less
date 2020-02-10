@@ -1,0 +1,24 @@
+.response-width-no-padding() {
+  @media (min-width: 1100px) {
+    width: 1100px;
+  }
+  @media (min-width: 768px) and (max-width: 1100px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.response-width() {
+  .response-width-no-padding();
+  @media (min-width: 1100px) {
+    padding: 32px 20px 0 20px;
+  }
+  @media (min-width: 768px) and (max-width: 1100px) {
+    padding: 32px 20px 0 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 32px 10px 0 10px;
+  }
+}
