@@ -1,6 +1,6 @@
 <template>
     <div class="home" id="home">
-        <vue-canvas-nest :el="'#home'" :config="{color:'44,93,178', opacity:0.4, count: 50, zIndex:200}"/>
+        <vue-canvas-nest :el="'#home'" :config="{color:'44,93,178', opacity:0.4, count: 20, zIndex:200}"/>
         <div id="up" class="up">
             <div class="left-title">
                 <title-line margin-bottom="10px"/>
@@ -17,11 +17,14 @@
             <div class="right-img">
                 <img src="../../assets/home.png" alt="home.png"/>
             </div>
-            <div class="app">
+            <div class="app" :style="{'height': clientHeight-100 + 'px'}">
                 <div class="up-img">
-                    <img src="../../assets/home.png" alt="home.png"/>
+                    <div class="img">
+                    </div>
                 </div>
-                <title-line margin-bottom="10px"/>
+                <div class="divider">
+                    <title-line/>
+                </div>
                 <div class="title">
                     细雨听风
                 </div>
@@ -37,8 +40,9 @@
             <div class="title">
                 最近更新
             </div>
-            <div class="articles" >
-                <my-card v-for="(item, index) in articleList" :key="index" :title="item.title" :img-url="item.coverImgUrl" :id="item.id"/>
+            <div class="articles">
+                <my-card v-for="(item, index) in articleList" :key="index" :title="item.title"
+                         :img-url="item.coverImgUrl" :id="item.id"/>
             </div>
         </div>
         <div class="down">
@@ -67,10 +71,13 @@
         data() {
             return {
                 spin: false,
-                articleList: []
+                articleList: [],
+                clientHeight: null
             }
         },
         mounted() {
+            this.clientHeight = document.documentElement.clientHeight;
+
             this.getHomeArticle();
         },
         methods: {
@@ -103,20 +110,21 @@
                     height: 100%;
 
                     padding-top: 80px;
+
                     .title {
-                        font-size: 60px;
+                        font-size: 50px;
                         font-weight: bolder;
                         color: #292929;
                     }
 
                     .sub-title {
                         font-size: 18px;
-                        margin-top: 20px;
+                        margin-top: 30px;
                         color: #292929;
                     }
 
                     .btn {
-                        margin-top: 20px;
+                        margin-top: 26px;
                         width: 80%;
                     }
                 }
@@ -140,7 +148,8 @@
                 }
             }
             @media (max-width: 768px) {
-                height: 600px;
+                min-height: 200px;
+                position: relative;
                 .left-title {
                     display: none;
                 }
@@ -154,33 +163,52 @@
                     height: 100%;
 
                     .up-img {
-                        height: 260px;
-                        width: 240px;
-                        margin: 0 auto 40px;
+                        height: 40%;
+                        width: 100%;
+                        position: absolute;
+                        top: 10%;
+                        display: flex;
+                        justify-content: center;
 
-                        img {
-                            width: 100%;
+                        .img {
                             height: 100%;
+                            width: 240px;
+                            background-image: url("../../assets/home.png");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
                         }
                     }
+
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                    }
                     .title {
-                        width: 320px;
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
                         text-align: center;
                         font-size: 30px;
                         font-weight: 600;
                         color: #292929;
-                        margin: 10px auto 20px;
+                        margin: 10% auto 5%;
                     }
 
                     .sub-title {
-                        width: 320px;
+                        position: absolute;
+                        top: 60%;
+                        width: 100%;
                         text-align: center;
                         font-size: 18px;
                         color: #292929;
-                        margin: 10px auto 30px;
+                        margin: 10% auto 20%;
                     }
+
                     .btn {
-                        width: 80%;
+                        position: absolute;
+                        top: 75%;
+                        width: 100%;
                         margin: 0 auto;
                     }
                 }

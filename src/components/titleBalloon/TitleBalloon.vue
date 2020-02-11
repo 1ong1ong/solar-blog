@@ -1,9 +1,9 @@
 <template>
     <div class="title-balloon">
-        <section></section>
+        <section/>
         <section>{{title}}</section>
-        <section></section>
-        <section></section>
+        <section/>
+        <section/>
     </div>
 </template>
 

@@ -24,49 +24,49 @@ let routers = [
                 path: 'article/list',
                 component: () => import('@/pages/articleList/ArticleList'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'article/detail',
                 component: () => import('@/pages/articleDetail/ArticleDetail'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'timeline',
                 component: () => import('@/pages/timeLine/TimeLine'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'friends',
                 component: () => import('@/pages/friends/Friends'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'about',
                 component: () => import('@/pages/about/About'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'tags/article/list',
                 component: () => import('@/pages/tagArticleList/TagArticleList'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             },
             {
                 path: 'tags',
                 component: () => import('@/pages/tagList/TagList'),
                 meta: {
-                    keepAlive: false
+                    keepAlive: true
                 }
             }
         ]

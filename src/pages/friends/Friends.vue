@@ -168,8 +168,8 @@
     .friends {
         .response-width();
         margin: 0 auto;
-        padding-right: 20px !important;
-        padding-left: 20px !important;
+        /*padding-right: 10px !important;*/
+        /*padding-left: 10px !important;*/
 
         .top-img {
             width: 100%;
