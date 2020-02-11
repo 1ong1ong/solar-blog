@@ -10,9 +10,6 @@
                         <div class="item">
                             敬请期待
                         </div>
-                        <div class="item">
-                            <!--                            资源推荐-->
-                        </div>
                     </div>
                 </a-col>
                 <a-col :xs="24" :sm="8">
@@ -20,9 +17,6 @@
                         <div class="title">
                             相关信息
                         </div>
-                        <!--                        <div class="item">-->
-                        <!--                            本站托管于 Coding-->
-                        <!--                        </div>-->
                         <div class="item">
                             本站托管于 GitHub
                         </div>
@@ -36,11 +30,11 @@
                         <div class="title">
                             其他
                         </div>
-                        <!--                        <div class="item">-->
-                        <!--                            资源推荐-->
-                        <!--                        </div>-->
                         <div class="item">
-                            QQ交流群：970863783
+                            联系我Q：970863783
+                        </div>
+                        <div class="item">
+                            QQ交流群：294372566
                         </div>
                     </div>
                 </a-col>
