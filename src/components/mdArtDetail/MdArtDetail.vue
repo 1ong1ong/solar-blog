@@ -17,8 +17,8 @@
                     <a-popover trigger="click">
                         <template slot="content">
                             <div class="zan-img">
-                                <img src="../../assets/test1.jpg" alt="">
-                                <img src="../../assets/test1.jpg" alt="">
+                                <img src="../../assets/pay/pay-wechat.jpg" alt="">
+                                <img src="../../assets/pay/pay-ali.jpg" alt="">
                             </div>
                         </template>
                         <a-button ghost shape="circle" class="zan-btn">赏</a-button>
