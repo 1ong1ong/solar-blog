@@ -134,6 +134,8 @@
             });
 
             this.getLinks();
+
+            this.$refs.commentView.getCommentList();
         },
         computed: {
 

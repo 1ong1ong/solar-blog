@@ -45,6 +45,9 @@
         components: {
             TitleLine, MarkdownItVue, Comment, CommentView
         },
+        mounted() {
+            this.$refs.commentView.getCommentList();
+        },
         data() {
             return {
                 content: "## 前言 :black_nib:\n" +

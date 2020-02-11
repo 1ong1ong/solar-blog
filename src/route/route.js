@@ -24,7 +24,7 @@ let routers = [
                 path: 'article/list',
                 component: () => import('@/pages/articleList/ArticleList'),
                 meta: {
-                    keepAlive: true
+                    keepAlive: false
                 }
             },
             {
@@ -38,7 +38,7 @@ let routers = [
                 path: 'timeline',
                 component: () => import('@/pages/timeLine/TimeLine'),
                 meta: {
-                    keepAlive: true
+                    keepAlive: false
                 }
             },
             {
@@ -52,7 +52,7 @@ let routers = [
                 path: 'about',
                 component: () => import('@/pages/about/About'),
                 meta: {
-                    keepAlive: true
+                    keepAlive: false
                 }
             },
             {
@@ -66,7 +66,7 @@ let routers = [
                 path: 'tags',
                 component: () => import('@/pages/tagList/TagList'),
                 meta: {
-                    keepAlive: true
+                    keepAlive: false
                 }
             }
         ]
