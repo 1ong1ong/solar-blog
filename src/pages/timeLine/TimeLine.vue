@@ -60,9 +60,8 @@
 
     .timeline {
         .response-width();
-        margin: 0 auto;
         padding-top: 50px;
-
+        margin: 0 auto 80px;
         .content {
             margin: 0 auto;
             @media (min-width: 1100px) {
