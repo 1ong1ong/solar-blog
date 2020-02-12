@@ -1,6 +1,8 @@
+import {getConfig} from '../../api/config';
 
 const state = {
-    currentMenuItem: ['']
+    currentMenuItem: [''],
+    config: {}
 };
 const mutations = {
     setMenuItem(state, item) {
@@ -8,6 +10,9 @@ const mutations = {
     },
     resetMenuItem(state) {
         state.currentMenuItem = [''];
+    },
+    setConfig(state, config) {
+        state.config = config;
     }
 };
 const actions = {
@@ -17,6 +22,11 @@ const actions = {
     },
     resetMenuItem({commit}) {
         commit('resetMenuItem');
+    },
+    initConfig({commit}) {
+        getConfig().then(res => {
+            commit('setConfig', res);
+        })
     }
 };
 const getters = {};

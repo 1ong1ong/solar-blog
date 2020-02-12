@@ -10,6 +10,9 @@
         name: 'app',
         created() {
             document.body.removeChild(document.getElementById('appLoading'));
+        },
+        mounted() {
+            this.$store.dispatch('home/initConfig');
         }
     }
 </script>

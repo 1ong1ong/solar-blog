@@ -107,25 +107,15 @@
                 screenWidth: 1200,
                 socialLinks: [],
                 friendsLinks: [],
-                content: "## :memo: 留言格式  :point_down:\n" +
-                    "::: success\n" +
-                    "1. **站点名称：**  *细雨听风*\n" +
-                    "2. **站点描述：** *读万卷书，行万里路*\n" +
-                    "3. **站点网址：** *https://www.cxlsky.com/*  \n" +
-                    "4. **网站图标：** *https://imgs.cxlsky.com/about-avatar.jpg*\n" +
-                    "5. **主题色调：** *#9a69ec*  \n" +
-                    ":::\n" +
-                    "##  :boy: 交友要求 :girl: \n" +
-                    "::: warning\n" +
-                    "1. **博文总数 >= 30**\n" +
-                    "2. **内容积极乐观**\n" +
-                    "3. **符合国家相关法律法规**\n" +
-                    "4. **符合本人当时心情**\n" +
-                    ":::"
             }
         },
         components: {
             TitleBalloon, FriendCard, MarkdownItVue, TitleLine, Comment, CommentView
+        },
+        computed: {
+            content() {
+                return this.$store.state.home.config.friendMdContent;
+            }
         },
         mounted() {
             this.screenWidth = document.documentElement.clientWidth;
@@ -136,9 +126,6 @@
             this.getLinks();
 
             this.$refs.commentView.getCommentList();
-        },
-        computed: {
-
         },
         methods: {
             chunkThreeList(links) {

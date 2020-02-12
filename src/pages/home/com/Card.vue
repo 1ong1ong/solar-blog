@@ -42,6 +42,8 @@
             width: 200px;
             height: 200px;
             box-shadow: 0 10px 20px #273247;
+            border-radius: 6px;
+
             @media (max-width: 768px) {
                 width: 140px;
                 height: 140px;
@@ -51,7 +53,6 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 6px;
-
             }
         }
 
