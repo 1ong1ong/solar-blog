@@ -128,6 +128,7 @@
     .comment-view {
         width: 100%;
         padding: 10px;
+        margin-top: 10px;
 
         .top {
             width: 100%;

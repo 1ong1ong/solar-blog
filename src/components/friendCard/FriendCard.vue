@@ -66,6 +66,7 @@
                 font-size: 13px;
                 color: #8492a6;
                 text-shadow: 0 1px #fff;
+                margin-top: 6px;
             }
 
             .avatar {

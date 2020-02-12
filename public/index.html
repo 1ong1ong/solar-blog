@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>细雨听风</title>
     <meta name="description" content="读万卷书，行万里路">
@@ -20,12 +21,105 @@
     <meta name="msapplication-TileColor" content="#000000">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="apple-touch-icon" href="<%= BASE_URL %>logo.png">
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but 细雨听风 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <style media="screen" type="text/css">
+        #appLoading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #ecf0ff;
+        }
+
+        #appLoading img {
+            position: absolute;
+            top: 40%;
+            width: 50px;
+            height: 50px;
+            animation: homeSpin ease 2s 0s infinite;
+        }
+
+        #appLoading .loading-text {
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            text-align: center;
+            animation: homeSpinText ease 2s 0s infinite;
+            transition: all 2s ease;
+        }
+
+        @keyframes homeSpin {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes homeSpinText {
+            from {
+                color: #6e2434;
+            }
+            to {
+                color: #31496e;
+            }
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but 细雨听风 doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="appLoading">
+    <img src="<%= BASE_URL %>logo.png" alt="loading"/>
+    <div id="loading-text" class="loading-text">正在拼命加载中 ... <span id="loadtext"></span></div>
+</div>
+<div id="app"></div>
+<script>
+
+    (function (window, undefined) {
+        //loading
+        let loader = document.getElementById("appLoading"),
+            bar = loader.querySelector("#loadtext"),
+            num = 0,
+            time = 0,
+            state = true;
+
+        //加载完成
+        function loadOk() {
+            if (state) {
+                state = false;
+                bar.innerHTML = "100%";
+                // loader.className = "loading active";//加到100%后，关闭加载效果
+                // setTimeout(function() {
+                //     loader.style.display = "none";
+                // }, 500);
+            }
+        }
+
+        let timer = setInterval(function () {
+            // num = parseInt(num + Math.random() * 10, 10);
+            num = num + 1
+            time++;
+            if (num > 90) {
+                num = 90;
+            } else {
+                bar.innerHTML = num + "%";
+            }
+            if (time > 98) {
+                clearInterval(timer);
+                // loadOk();
+            }
+        }, 1000);
+
+
+        // window.onload = function () { //页面加载完成后，关闭加载效果
+        //     loadOk();
+        // };
+
+    })(window);
+</script>
+<!-- built files will be auto injected -->
+</body>
 </html>

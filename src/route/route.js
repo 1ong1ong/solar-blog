@@ -1,6 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Friends from '@/pages/friends/Friends';
+import About from '@/pages/about/About';
+import ArticleDetail from '@/pages/articleDetail/ArticleDetail';
+import TimeLine from '@/pages/timeLine/TimeLine';
+import TagArticleList from '@/pages/tagArticleList/TagArticleList';
+import TagList from '@/pages/tagList/TagList';
+import ArticleList from '@/pages/articleList/ArticleList';
+import Home from '@/pages/home/Home';
+
+
 Vue.use(Router);
 
 
@@ -15,56 +25,56 @@ let routers = [
         children: [
             {
                 path: 'home',
-                component: () => import('@/pages/home/Home'),
+                component: Home,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'article/list',
-                component: () => import('@/pages/articleList/ArticleList'),
+                component: ArticleList,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'article/detail',
-                component: () => import('@/pages/articleDetail/ArticleDetail'),
+                component: ArticleDetail,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'timeline',
-                component: () => import('@/pages/timeLine/TimeLine'),
+                component: TimeLine,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'friends',
-                component: () => import('@/pages/friends/Friends'),
+                component: Friends,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'about',
-                component: () => import('@/pages/about/About'),
+                component: About,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'tags/article/list',
-                component: () => import('@/pages/tagArticleList/TagArticleList'),
+                component: TagArticleList,
                 meta: {
                     keepAlive: true
                 }
             },
             {
                 path: 'tags',
-                component: () => import('@/pages/tagList/TagList'),
+                component: TagList,
                 meta: {
                     keepAlive: true
                 }

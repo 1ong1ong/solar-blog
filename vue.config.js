@@ -9,16 +9,17 @@ module.exports = {
     // 指定index.html的输出路径
     indexPath: 'index.html',
     // 打包生成的静态资源文件名hash
-    filenameHashing: true,
+    filenameHashing: false,
     // 保存时进行使用 eslint-loader 校验，检查错误会触发编译失败
     lintOnSave: true,
     // 是否运行时编译 vue 构建版本
     runtimeCompiler: false,
+    // 打包去掉 .map 文件
+    productionSourceMap: false,
 
     configureWebpack: {
         performance: {
             hints: 'warning',
-
         }
     },
 

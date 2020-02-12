@@ -8,8 +8,8 @@
 
     export default {
         name: 'app',
-        components: {
-
+        created() {
+            document.body.removeChild(document.getElementById('appLoading'));
         }
     }
 </script>
