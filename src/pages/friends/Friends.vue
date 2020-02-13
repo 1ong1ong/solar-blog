@@ -13,11 +13,11 @@
                     </a-col>
                     <a-col class="gutter-row" :span="8" v-if="item[1] !== undefined" >
                         <friend-card :title="item[1] ? item[1].name : ''" :backgroundImg="item[1] ? item[1].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[1] ? item[1].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[1] ? item[1].link: '#'"/>
                     </a-col>
                     <a-col class="gutter-row" :span="8" v-if="item[2] !== undefined">
                         <friend-card :title="item[2] ? item[2].name : ''" :backgroundImg="item[2] ? item[2].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[2] ? item[2].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[2] ? item[2].des: ''" :borderColor="item[2] ? item[2].color : ''" :link="item[2] ? item[2].link: '#'"/>
                     </a-col>
                 </a-row>
                 <a-row v-show="screenWidth < 768 && screenWidth > 634" v-for="(item, index) in chunkTwoList(socialLinks)"
@@ -28,7 +28,7 @@
                     </a-col>
                     <a-col class="gutter-row" :span="12" v-if="item[1] !== undefined" >
                         <friend-card :title="item[1] ? item[1].name : ''" :backgroundImg="item[1] ? item[1].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[1] ? item[1].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[1] ? item[1].link: '#'"/>
                     </a-col>
                 </a-row>
                 <a-row v-show="screenWidth < 634" v-for="(item, index) in socialLinks" :key="'link3'+index">
@@ -47,11 +47,11 @@
                     </a-col>
                     <a-col class="gutter-row" :span="8" v-if="item[1] !== undefined" >
                         <friend-card :title="item[1] ? item[1].name : ''" :backgroundImg="item[1] ? item[1].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[1] ? item[1].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[1] ? item[1].link: '#'"/>
                     </a-col>
                     <a-col class="gutter-row" :span="8" v-if="item[2] !== undefined">
                         <friend-card :title="item[2] ? item[2].name : ''" :backgroundImg="item[2] ? item[2].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[2] ? item[2].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[2] ? item[2].des: ''" :borderColor="item[2] ? item[2].color : ''" :link="item[2] ? item[2].link: '#'"/>
                     </a-col>
                 </a-row>
                 <a-row v-show="screenWidth < 768 && screenWidth > 634" v-for="(item, index) in chunkTwoList(friendsLinks)"
@@ -62,7 +62,7 @@
                     </a-col>
                     <a-col class="gutter-row" :span="12" v-if="item[1] !== undefined" >
                         <friend-card :title="item[1] ? item[1].name : ''" :backgroundImg="item[1] ? item[1].logo : ''"
-                                     :subtitle="item[0] ? item[0].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[0] ? item[0].link: '#'"/>
+                                     :subtitle="item[1] ? item[1].des: ''" :borderColor="item[1] ? item[1].color : ''" :link="item[1] ? item[1].link: '#'"/>
                     </a-col>
                 </a-row>
                 <a-row v-show="screenWidth < 634" v-for="(item, index) in friendsLinks" :key="'link3'+index">

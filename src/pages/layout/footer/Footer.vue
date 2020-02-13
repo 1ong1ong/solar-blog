@@ -2,17 +2,17 @@
     <div class="foot">
         <div class="content">
             <a-row >
-                <a-col :xs="24" :sm="8">
-                    <div class="box">
-                        <div class="title">
-                            资源推荐
-                        </div>
-                        <div class="item">
-                            敬请期待
-                        </div>
-                    </div>
-                </a-col>
-                <a-col :xs="24" :sm="8">
+<!--                <a-col :xs="24" :sm="8">-->
+<!--                    <div class="box">-->
+<!--                        <div class="title">-->
+<!--                            资源推荐-->
+<!--                        </div>-->
+<!--                        <div class="item">-->
+<!--                            敬请期待-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a-col>-->
+                <a-col :xs="24" :sm="12">
                     <div class="box">
                         <div class="title">
                             相关信息
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </a-col>
-                <a-col :xs="24" :sm="8">
+                <a-col :xs="24" :sm="12">
                     <div class="box">
                         <div class="title">
                             其他
