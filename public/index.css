@@ -88,14 +88,10 @@ table {
 @keyframes homeSpinText {
     from {
         color: #6e2434;
-        /*transform: rotate(5deg)*/
-        /*transform: translateY(-10px);*/
         font-size: 14px;
     }
     to {
         color: #31496e;
-        /*transform: rotate(-5deg)*/
-        transform: translateY(-10px);
-        font-size: 15px;
+        font-size: 14.4px;
     }
 }

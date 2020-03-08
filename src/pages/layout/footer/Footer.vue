@@ -20,7 +20,7 @@
                         <div class="item">
                             本站托管于 GitHub
                         </div>
-                        <div class="item">
+                        <div class="item" @click="routeHref('http://www.beian.miit.gov.cn')">
                             浙 ICP 备18050633号
                         </div>
                     </div>
@@ -53,7 +53,12 @@
 
 <script>
     export default {
-        name: "Footer"
+        name: "Footer",
+        methods: {
+            routeHref(url) {
+                window.open(url,'_blank')
+            }
+        }
     }
 </script>
 
@@ -88,6 +93,11 @@
                 .item {
                     margin: 20px 0;
                     font-size: 15px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #2C5DB2;
+                    }
                 }
             }
         }
